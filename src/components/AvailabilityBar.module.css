@@ -1,0 +1,92 @@
+.bar {
+  width: 100%;
+  border-bottom: 1px solid var(--border);
+  background: var(--bg);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 14px clamp(24px, 6vw, 120px);
+}
+
+.left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+/* Pulsing dot */
+.pulse {
+  position: relative;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #4ade80;
+  flex-shrink: 0;
+}
+
+.pulse::before {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: #4ade8040;
+  animation: ping 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+@keyframes ping {
+  0%   { transform: scale(0.8); opacity: 1; }
+  75%, 100% { transform: scale(2); opacity: 0; }
+}
+
+.label {
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+  letter-spacing: 0.01em;
+}
+
+.divider {
+  width: 1px;
+  height: 14px;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.detail {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--gray-muted);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--accent);
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  transition: opacity 0.2s var(--ease);
+  flex-shrink: 0;
+}
+
+.cta:hover { opacity: 0.7; }
+
+@media (max-width: 900px) {
+  .detail { display: none; }
+  .divider { display: none; }
+  .inner { gap: 12px; }
+}

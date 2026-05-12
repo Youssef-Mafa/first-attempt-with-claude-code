@@ -1,0 +1,128 @@
+.section {
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 0;
+  overflow: hidden;
+}
+
+/* Bio */
+.bio {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  padding: 100px clamp(24px, 6vw, 120px) 80px;
+  align-items: start;
+}
+
+.left {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.eyebrow {
+  font-family: var(--font-body);
+  font-size: 11px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+.heading {
+  font-family: var(--font-display);
+  font-size: clamp(36px, 4.5vw, 58px);
+  font-weight: 600;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--text);
+}
+
+.body {
+  font-family: var(--font-body);
+  font-size: clamp(15px, 1.4vw, 17px);
+  font-weight: 400;
+  line-height: 1.75;
+  color: #a8a49f;
+  max-width: 460px;
+}
+
+/* Portrait placeholder */
+.portrait {
+  aspect-ratio: 3 / 4;
+  background: var(--border);
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 24px;
+  gap: 6px;
+  max-width: 360px;
+  justify-self: end;
+  width: 100%;
+}
+
+.portraitLabel {
+  font-family: var(--font-display);
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: -0.01em;
+}
+
+.portraitSub {
+  font-family: var(--font-body);
+  font-size: 12px;
+  color: var(--gray-muted);
+  letter-spacing: 0.04em;
+}
+
+/* Tag rows */
+.tagsWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 0 64px;
+  overflow: hidden;
+  border-top: 1px solid var(--border);
+  padding-top: 32px;
+}
+
+.tagTrack {
+  display: flex;
+  gap: 12px;
+  width: max-content;
+  will-change: transform;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 13px;
+  color: #a8a49f;
+  white-space: nowrap;
+  letter-spacing: 0.02em;
+}
+
+.tagAlt {
+  border-color: transparent;
+  background: var(--border);
+  color: var(--text);
+}
+
+@media (max-width: 900px) {
+  .bio {
+    grid-template-columns: 1fr;
+    gap: 40px;
+    padding-bottom: 48px;
+  }
+  .portrait {
+    aspect-ratio: 4 / 3;
+    max-width: 100%;
+    justify-self: stretch;
+  }
+}
