@@ -1,4 +1,4 @@
-# Youssef Mafamane — Landing Page Studio
+# YM — Landing Page Studio
 
 A high-converting freelance portfolio site built with React + Vite, targeting local businesses in Morocco.
 
