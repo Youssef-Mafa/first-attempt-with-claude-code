@@ -69,7 +69,7 @@ export default function About() {
             Designer, builder,<br />based in Agadir.
           </motion.h2>
           <motion.p className={styles.body} {...fade(0.25)} animate={inView ? fade(0.25).animate : fade(0.25).initial}>
-            I&apos;m Youssef Mafamane — I design and build websites that help local
+            I&apos;m YM — I design and build websites that help local
             businesses in Morocco attract more clients and look like they mean it.
             Restaurants, clinics, boutiques, coaches — I turn their goals into
             pages that convert.
@@ -88,11 +88,11 @@ export default function About() {
         >
           <img
             src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
-            alt="Youssef Mafamane"
+            alt="YM"
             className={styles.portraitImg}
           />
           <div className={styles.portraitCaption}>
-            <span className={styles.portraitLabel}>Youssef Mafamane</span>
+            <span className={styles.portraitLabel}>YM</span>
             <span className={styles.portraitSub}>Agadir, Morocco</span>
           </div>
         </motion.div>

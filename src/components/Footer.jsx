@@ -18,14 +18,14 @@ export default function Footer() {
     <footer className={styles.footer}>
       {/* Big name */}
       <div className={styles.nameRow}>
-        <span className={styles.name}>Youssef Mafamane</span>
+        <span className={styles.name}>YM</span>
         <span className={styles.tagline}>Web Design Studio · Agadir, Morocco</span>
       </div>
 
       {/* Bottom bar */}
       <div className={styles.bar}>
         <span className={styles.copy}>
-          © {new Date().getFullYear()} Youssef Mafamane. All rights reserved.
+          © {new Date().getFullYear()} YM. All rights reserved.
         </span>
 
         <nav className={styles.nav}>

@@ -55,7 +55,7 @@ export default function Hero() {
         </h1>
 
         <motion.p className={styles.sub} {...fade(1.1)}>
-          Youssef Mafamane designs and builds high-converting websites
+          YM designs and builds high-converting websites
           for restaurants, clinics, boutiques, and coaches across Morocco.
         </motion.p>
 

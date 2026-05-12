@@ -22,7 +22,7 @@ export default function Nav({ toggleTheme, theme }) {
       >
         <a href="/" className={styles.logo}>
           <span className={styles.logoMark}>YM</span>
-          <span className={styles.logoName}>Youssef Mafamane</span>
+          <span className={styles.logoName}>YM</span>
         </a>
 
         {/* Desktop links */}
