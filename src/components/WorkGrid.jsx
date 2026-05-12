@@ -9,21 +9,25 @@ const PROJECTS = [
     id: 1, name: 'Dar Zitoun', type: 'Restaurant', year: '2025',
     tags: ['Menu digital', 'Réservations', 'SEO local'],
     shade: '#1c1a17', accent: '#c8a96e',
+    img: 'https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=900&q=80',
   },
   {
     id: 2, name: 'Cabinet Santé+', type: 'Medical Clinic', year: '2025',
     tags: ['Prise de RDV', 'Mobile-first', 'Google Maps'],
     shade: '#14161a', accent: '#6e9ec8',
+    img: 'https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=80',
   },
   {
     id: 3, name: 'Maison Riad', type: 'Boutique Hotel', year: '2025',
     tags: ['Galerie', 'Booking', 'Branding'],
     shade: '#191614', accent: '#c87a6e',
+    img: 'https://images.unsplash.com/photo-1520250497591-112ba8d25d1d?w=900&q=80',
   },
   {
     id: 4, name: 'Coach Khalid', type: 'Life Coach', year: '2024',
     tags: ['Landing page', 'Funnel CTA', 'Analytics'],
     shade: '#141a16', accent: '#7ac87a',
+    img: 'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=900&q=80',
   },
 ]
 
@@ -43,12 +47,14 @@ function Card({ project, index }) {
         animate={inView ? { opacity: 1, y: 0 } : {}}
         transition={{ duration: 0.7, ease: EASE, delay: 0.05 }}
       >
-        {/* Placeholder image area */}
+        {/* Project image */}
         <div className={styles.visual} style={{ background: project.shade }}>
-          <div className={styles.visualLabel} style={{ color: project.accent }}>
-            {project.name}
-          </div>
-          <div className={styles.visualType}>{project.type}</div>
+          <img
+            src={project.img}
+            alt={project.name}
+            className={styles.visualImg}
+          />
+          <div className={styles.visualOverlay} style={{ '--accent': project.accent }} />
         </div>
 
         {/* Meta */}

@@ -86,8 +86,15 @@ export default function About() {
           animate={inView ? { opacity: 1, scale: 1 } : {}}
           transition={{ delay: 0.2, duration: 0.8, ease: EASE }}
         >
-          <span className={styles.portraitLabel}>Youssef Mafamane</span>
-          <span className={styles.portraitSub}>Agadir, Morocco</span>
+          <img
+            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&q=80"
+            alt="Youssef Mafamane"
+            className={styles.portraitImg}
+          />
+          <div className={styles.portraitCaption}>
+            <span className={styles.portraitLabel}>Youssef Mafamane</span>
+            <span className={styles.portraitSub}>Agadir, Morocco</span>
+          </div>
         </motion.div>
       </div>
 
